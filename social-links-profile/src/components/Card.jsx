@@ -3,10 +3,11 @@ import UserDetails from "./UserDetails";
 import ButtonSection from "./ButtonSection";
 import "./Card.css";
 
-const Card = () => {
+const Card = (props) => {
+  const user = props.user;
   return (
     <div className="contenedorDinamico">
-      <UserDetails />
+      {/* <UserDetails user = {user}/> */}
       <ButtonSection />
     </div>
   );

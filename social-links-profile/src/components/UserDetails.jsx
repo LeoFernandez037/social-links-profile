@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./UserDetails.css";
-
-const UserDetails = () => {
+/*React es un teatro donde los componentes son actores, y su ciclo de vida es su actuacion*/
+const UserDetails = (props) => {
+  /*user es un objeto, setUser es una funcion que cambia los valores de user*/
+  const [user, setUser] = useState({});
+  setUser(props.user);
+  /*Use effect nos cambia el estado*/
   return (
     <div className="Contenedor1">
       <div className="contenedorImagen">
         <img
           className="redonda"
-          src="https://i.ibb.co/HCXX7Vc/06b1e6e3-be27-4c7a-abd7-bbdbc4f315a1.webp"
-          alt="image not found"
+          src={user.avatar}
+          alt={`avatar de ${user.name}`}
         ></img>
       </div>
-      <h1 className="nombre">Jessica Randall</h1>
-      <p className="ubicacion">London, United Kingdom</p>
-      <p className="descripcion">"Front-end developer and avid reader."</p>
+      <h1 className="nombre">{user.name}</h1>
+      <p className="ubicacion">{user.location}</p>
+      <p className="descripcion">{user.description}</p>
     </div>
   );
 };
