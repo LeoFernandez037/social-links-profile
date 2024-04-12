@@ -4,22 +4,22 @@ import "./UserDetails.css";
 const UserDetails = (props) => {
   // const [user, setUser] = useState({});
   // setUser(props.user);
-  const user = props.user;
+  const character = props.character;
   //user es un objeto, setUser es una funcion que cambia los valores de user
-  //console.log(user.name);
+  console.log(character);
   //Useeffect nos cambia el estado
   return (
     <div className="Contenedor1">
       <div className="contenedorImagen">
         <img
           className="redonda"
-          src={user.avatar}
-          alt={`avatar de ${user.name}`}
+          src={character.image}
+          alt={`avatar de ${character.name}`}
         ></img>
       </div>
-      <h1 className="nombre">{user.name}</h1>
-      <p className="ubicacion">{user.location}</p>
-      <p className="descripcion">{user.description}</p>
+      <h1 className="nombre">{character.name}</h1>
+      <p className="ubicacion">{character.location}</p>
+      <p className="descripcion">{character.description}</p>
     </div>
   );
 };
