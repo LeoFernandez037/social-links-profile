@@ -10,13 +10,14 @@
   button {
     width: 255px;
     height: 40px;
-    font-family: InterNegrilla;
+    font-family: inherit;
+    font-weight: 700  ;
     border: 1px solid var(--Grey) ;
     background: var(--Grey) ;
     color: var(--White);
     font-size: small;
     border-radius: 6px;
-    transition: background-color 0.8s;
+    transition: background-color 1s;
   }
   
   button:hover{

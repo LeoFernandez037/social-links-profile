@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import "./UserDetails.css";
-/*React es un teatro donde los componentes son actores, y su ciclo de vida es su actuacion*/
+//React es un teatro donde los componentes son actores, y su ciclo de vida es su actuacion
 const UserDetails = (props) => {
-  /*user es un objeto, setUser es una funcion que cambia los valores de user*/
-  const [user, setUser] = useState({});
-  setUser(props.user);
-  /*Use effect nos cambia el estado*/
+  // const [user, setUser] = useState({});
+  // setUser(props.user);
+  const user = props.user;
+  //user es un objeto, setUser es una funcion que cambia los valores de user
+  //console.log(user.name);
+  //Useeffect nos cambia el estado
   return (
     <div className="Contenedor1">
       <div className="contenedorImagen">
