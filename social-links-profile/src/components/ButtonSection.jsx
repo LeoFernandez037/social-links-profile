@@ -7,9 +7,7 @@ const ButtonSection = ({ socialLinks }) => {
     <div className="Contenedor1">
       <div className="container">
         {socialLinks.map((socialLink) => (
-          <button key={socialLink.name} onclick={socialLink.URL}>
-            {socialLink.name}
-          </button>
+          <button key={socialLink.name}>{socialLink.name}</button>
         ))}
       </div>
     </div>

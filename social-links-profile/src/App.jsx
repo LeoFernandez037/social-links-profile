@@ -3,7 +3,7 @@ import Card from "./components/Card";
 import "./App.css";
 
 function App() {
-  const [users, setusers] = useState([]);
+  const [characters, setusers] = useState([]);
   function generarNumerosAleatorios() {
     const numeros = [];
     for (let i = 0; i < 10; i++) {
@@ -13,7 +13,6 @@ function App() {
     //console.log(numeros);
     return numeros;
   }
-
   useEffect(() => {
     /*aca el fetch hace el trabajo de un get*/
     fetch(
@@ -31,8 +30,8 @@ function App() {
   }, []);
   return (
     <div>
-      {users.map((character) => (
-        <Card key={character.id} user={character} />
+      {characters.map((character) => (
+        <Card key={character.id} user={characters} />
       ))}
     </div>
   );
