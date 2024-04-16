@@ -18,8 +18,10 @@ const UserDetails = (props) => {
         ></img>
       </div>
       <h1 className="nombre">{character.name}</h1>
-      <p className="ubicacion">{character.location}</p>
-      <p className="descripcion">{character.description}</p>
+      <p className="ubicacion">{character.location.name}</p>
+      <p className="descripcion">
+        {character.species}, STATUS: {character.status}
+      </p>
     </div>
   );
 };

@@ -1,12 +1,10 @@
 .contenedorDinamico{
     margin-top: 110px;
-    display: flex;
     background-color:  var(--DarkGrey) ;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
     border-radius: 6px;
     padding: 10px 5px;
+    overflow: hidden;
   }
 
   @media (min-width: 376px) {
