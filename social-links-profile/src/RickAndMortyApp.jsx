@@ -1,39 +1,39 @@
 import React, { useState, useEffect } from "react";
 import "./RickAndMortyApp.css";
 import Card2 from "./components/Card2";
-
-function generarNumerosAleatorios() {
-  const numeros = [];
-  for (let i = 0; i < 10; i++) {
-    numeros.push(Math.floor(Math.random() * 826)); // Puedes ajustar el rango según tus necesidades
-  }
-  numeros.toString();
-  //console.log(numeros);
-  return numeros;
-}
+import { useSearchParams } from "react-router-dom";
 
 function RickAndMortyApp() {
-  const [characters, setcharacters] = useState([]);
+  const [character, setPersonaje] = useState([]);
+  let [searchParams, setSearchParams] = useSearchParams();
+  const id = searchParams.get("id");
+
   useEffect(() => {
-    /*aca el fetch hace el trabajo de un get*/
-    fetch(
-      "https://rickandmortyapi.com/api/character/" + generarNumerosAleatorios()
-    )
-      .then((res) => {
-        /*le damos el formato de json*/
-        return res.json();
-      })
-      /*le colocamos una variable data y lo mostramos por consola*/
+    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+      .then((res) => res.json())
       .then((data) => {
-        setcharacters(data);
+        setPersonaje(data);
+        /* console.log(data); */
+        fetchEpisodes(data.episode.slice(0, 4));
       });
   }, []);
+
+  const fetchEpisodes = (episodesUrls) => {
+    const promises = episodesUrls.map((url) =>
+      fetch(url).then((res) => res.json())
+    );
+
+    Promise.all(promises)
+      .then((episodios) => {
+        setEpisodio(episodios);
+        /*         console.log(episodios);*/
+      })
+      .catch((error) => console.error(error));
+  };
   return (
     <div className="ConTodo">
       <div className="Characters2Section">
-        {characters.map((character) => (
-          <Card2 key={character.id} character={character} />
-        ))}
+        <Card2 key={character.id} character={character} />
       </div>
     </div>
   );
