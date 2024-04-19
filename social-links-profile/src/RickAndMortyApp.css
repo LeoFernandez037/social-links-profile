@@ -1,0 +1,35 @@
+
+.inter-ligero {
+  font-family: "InterLigero", sans-serif;
+  font-optical-sizing: auto;
+  font-style: Light;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.ConTodo{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.CharactersSection{
+  display: grid;
+  grid-template-columns: repeat(5, 350px);
+  align-content: stretch;
+}   
+
+.Characters2Section{
+  display: grid;
+  align-content: stretch;
+  grid-template-columns: repeat(2, 850px);
+  justify-content: end;
+}
+
+
+@media (max-width: 376px) {
+  .Characters2Section {
+       grid-template-columns: repeat(1, 850px);
+  }
+ }
+

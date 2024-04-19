@@ -1,0 +1,21 @@
+.CardEpisodio{
+    width: 120px;
+    background-color:  var(--Grey) ;
+    align-items: center;
+    border-radius: 6px;
+    padding: 10px 0px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px;
+    margin: 5px;
+    border-color: var(--White);
+  }
+
+  .verde{
+    margin: 0px;
+    display: flex;
+    color:  var(--Green);
+    font-size: small;
+    justify-content: center;
+  }
+

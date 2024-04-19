@@ -1,15 +1,15 @@
 .contenedorDinamico{
-    margin-top: 110px;
-    background-color:  var(--DarkGrey) ;
-    align-items: center;
-    border-radius: 6px;
-    padding: 10px 5px;
-    overflow: hidden;
-  }
+  background-color:  var(--DarkGrey) ;
+  width: 250px;
+  height: 250px;
+  margin: 50px;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+}
 
-  @media (min-width: 376px) {
-    .contenedorDinamico{
-         margin-top: 90px;
-         scale: 1.2;
-    }
-   }
+@media (min-width: 376px) {
+  .contenedorDinamico{
+       scale: 1.2;
+  }
+ }
