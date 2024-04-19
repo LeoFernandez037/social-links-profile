@@ -1,8 +1,11 @@
 import React from "react";
-// import Navigation from "./routers/Navigation";
-import RickAndMortyApp from "./RickAndMortyApp";
+import Navigation from "./routes/Navigation";
 
 function App() {
-  return <RickAndMortyApp />;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 }
 export default App;
