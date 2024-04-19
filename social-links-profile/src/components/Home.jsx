@@ -4,7 +4,7 @@ import Card from "./Card";
 function generarNumerosAleatorios() {
   const numeros = [];
   for (let i = 0; i < 10; i++) {
-    numeros.push(Math.floor(Math.random() * 826)); // Puedes ajustar el rango según tus necesidades
+    numeros.push(Math.floor(Math.random() * 825)); // Puedes ajustar el rango según tus necesidades
   }
   numeros.toString();
   //console.log(numeros);

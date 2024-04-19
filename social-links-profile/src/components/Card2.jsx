@@ -1,6 +1,7 @@
 import React from "react";
 import UserDetails2 from "./UserDetails2";
 import Episodes from "./Episodes";
+import { NavLink } from "react-router-dom";
 import "./Card2.css";
 const Card2 = (props) => {
   const character = props.character;
@@ -10,7 +11,9 @@ const Card2 = (props) => {
       {/* <ButtonSection socialLinks={socialLinks} /> */}
       <h2>Episodios</h2>
       <Episodes character={character} />
-      <button className="boton">HOME</button>
+      <NavLink to="/">
+        <button className="boton">HOME</button>
+      </NavLink>
     </div>
   );
 };

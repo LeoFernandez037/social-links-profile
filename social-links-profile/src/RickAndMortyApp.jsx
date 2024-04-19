@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./RickAndMortyApp.css";
-import Card from "./components/Card";
 import Card2 from "./components/Card2";
 
 function generarNumerosAleatorios() {
@@ -31,11 +30,6 @@ function RickAndMortyApp() {
   }, []);
   return (
     <div className="ConTodo">
-      <div className="CharactersSection">
-        {characters.map((character) => (
-          <Card key={character.id} character={character} />
-        ))}
-      </div>
       <div className="Characters2Section">
         {characters.map((character) => (
           <Card2 key={character.id} character={character} />

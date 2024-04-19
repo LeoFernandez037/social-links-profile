@@ -1,6 +1,6 @@
 import React from "react";
 import UserDetails from "./UserDetails";
-import ButtonSection from "./ButtonSection";
+import { NavLink } from "react-router-dom";
 import "./Card.css";
 
 function Card(props) {
@@ -9,10 +9,12 @@ function Card(props) {
   // const socialLinks = user["Social-links"];
   //const locations = character["location"];
   return (
-    <div className="contenedorDinamico">
-      <UserDetails character={character} />
-      {/* <ButtonSection socialLinks={socialLinks} /> */}
-    </div>
+    <NavLink to={`/character?id=${character.id}`}>
+      <div className="contenedorDinamico">
+        <UserDetails character={character} />
+        {/* <ButtonSection socialLinks={socialLinks} /> */}
+      </div>
+    </NavLink>
   );
 }
 
