@@ -11,25 +11,14 @@
     display: flex;
     height: 100%;
     flex-direction: column;
+    justify-content: center;
 }
-
-.CharactersSection{
-  display: grid;
-  grid-template-columns: repeat(5, 350px);
-  align-content: stretch;
-}   
 
 .Characters2Section{
-  display: grid;
+  display: flex;
   align-content: stretch;
-  grid-template-columns: repeat(2, 850px);
-  justify-content: end;
+  justify-content: center;
 }
 
 
-@media (max-width: 376px) {
-  .Characters2Section {
-       grid-template-columns: repeat(1, 850px);
-  }
- }
 

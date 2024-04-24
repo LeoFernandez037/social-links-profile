@@ -12,9 +12,9 @@ const UserDetails2 = (props) => {
         <p className="ubicacion2">STATUS: </p>
         <p className="descripcion2">{character.status}</p>
       </div>
-      <p className="descripcion2">
+      <h2>
         {character.name} TYPE: {character.species}
-      </p>
+      </h2>
     </div>
   );
 };

@@ -57,3 +57,7 @@
     height: auto;
     justify-content: center;
   }
+
+  h2{
+    margin: 0px;
+  }

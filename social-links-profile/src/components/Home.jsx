@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
+import "./Home.css";
 
 function generarNumerosAleatorios() {
   const numeros = [];

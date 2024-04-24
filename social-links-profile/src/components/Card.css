@@ -8,7 +8,7 @@
   padding: 5px 5px;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   .contenedorDinamico{
        scale: 1.2;
   }

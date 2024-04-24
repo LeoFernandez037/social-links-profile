@@ -7,13 +7,12 @@ function RickAndMortyApp() {
   const [character, setPersonaje] = useState([]);
   let [searchParams, setSearchParams] = useSearchParams();
   const id = searchParams.get("id");
-
+  //no se donde se usa el setSearchParams :v
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setPersonaje(data);
-        /* console.log(data); */
         fetchEpisodes(data.episode.slice(0, 4));
       });
   }, []);
@@ -26,7 +25,6 @@ function RickAndMortyApp() {
     Promise.all(promises)
       .then((episodios) => {
         setEpisodio(episodios);
-        /*         console.log(episodios);*/
       })
       .catch((error) => console.error(error));
   };
@@ -38,4 +36,7 @@ function RickAndMortyApp() {
     </div>
   );
 }
+//Ya funcaaaaaaaaaaaaa GAAAAAAAAAAAAAAAAAAAAAAAAA :3
 export default RickAndMortyApp;
+//----------------------------------------------------------------
+//Gracias Lozano por la explicacion :y
